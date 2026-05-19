@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-nginx-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/herley-shaori/learn-argocd
+    targetRevision: main
+    path: manifests/prod/hello-nginx
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: hello-nginx-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
