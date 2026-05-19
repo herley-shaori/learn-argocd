@@ -24,7 +24,7 @@ File di `argocd/` mendaftarkan repo + path mana yang harus ArgoCD pantau.
 
 ## Cara pakai
 
-1. Push repo ini ke GitHub.
+1. Push repo ini ke GitHub (branch `master`).
 2. Daftarkan kedua Application ke ArgoCD:
 
    ```sh
