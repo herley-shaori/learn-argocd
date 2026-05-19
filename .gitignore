@@ -1,0 +1,15 @@
+# Secrets and credentials — never commit these
+*.env
+.env
+.env.*
+*secret*.yaml
+*secret*.yml
+*credentials*
+*password*
+*.key
+*.pem
+kubeconfig
+*.kubeconfig
+
+# Local / editor noise
+.DS_Store
